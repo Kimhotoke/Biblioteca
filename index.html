@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción</title>
+    <link rel="stylesheet", href="css/index.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-enlaces">
+            <li><a href="index.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="javascript.html">JavasScript</a></li>
+        </ul>
+    </nav>
+    <header>Introducción a HTML</header>
+   
+    <main>
+
+        <div class="intHTML">
+            <article class="titulo"><h1>HTML</h1></article>
+            <p>HTML significa <strong>Hyper Text Markup Lenguage</strong> (lenguaje marcado de hipertexto), a diferencia de otros programas HTML no es un lenguaje de programación como Javascript, no tiene lógica, no toma decisiones, no calcula nada.<br>Es un lenguaje que describe la estructura y el significado de un contenido, le dice al navegador "esto es un título", "esto es una lista", "esto es un formulario", nada más.</p>
+            <p><strong>Hypertext:</strong> texto que puede "saltar" a otro lugar mediante enlaces (a href="#")</p>
+            <p>HTML es como el esqueleto de una casa, define dónde están las paredes, dónde la puerta, dónde las ventanas, pero no pinta nada no decide qué tan cómodos son los sillones, eso lo hará <strong>CSS</strong> (el aspecto visual), y Javascript (el comportamiento de la lógica).</p>
+            <figure class="esqueletosemantico">
+                <img src="https://dcreations.es/storage/files/1/blog/html/guia-completa-html-semantico/estructura-html-semantica.png" alt="imagen de ejemplo" width="60%", height="60%" >
+            </figure>
+            <h2>Semántica</h2>
+            <p>parte lógica y en orden para un navegador web</p>
+            <figure>
+                <img src="imagenes/div.png" alt="#">
+            </figure>
+            <p>El problema de usar solo div para todo es que es una caja genérica, sin ningún significado, literalmente "división". El navegador, un buscador o un lector de pantalla no tienen forma de saber qué es cada div sin leer el nombre de la clase</p>
+            <figure>
+                <img src="imagenes/etiquetas-semánticas.png", alt="#">
+            </figure>
+            <p>La diferencia no es visual, es de significado explícito, reconocido universalmente por navegadores, buscadores y tecnología de accesibilidad, sin depender de que tú le hayas puesto nombre de clase razonable</p>
+            <p>El main solo se repite una vez por página y dentro de el puede ir tanto section como div</p>
+
+            <h3> Strong vs b </h3>
+            <p> ambas etiquetas hacen que el texto se vea en negrita por defecto, pero significan cosas distintas:<br> <b>strong:</b> signfica esto tiene importancia real, es relevante para el sentido del texto siendo semantico.<br><b>b:</b>significa quiero que esto se vea en negrita sin ninguna razón de importancia</p>
+            <hr>
+            <h2>Estructura basica de HTML</h2>
+            <p>Todo archivo HTMl sigue una estructura basica, que son;<br></p>
+            <ul>
+                <li>!DOCTYPE html</li>
+                <li>html lang="es"</li>
+                <li>head</li>
+                <li>meta charset="UTF-8"</li>
+                <li>meta name="viewport"</li>
+                <li>Content="widht=device-width, initial-scale=1.0"</li>
+                <li>title</li>
+                <li>body</li>
+            </ul>
+            <figure class="estructurahtml">
+                <img src="imagenes/AnatomíaHTML.png" alt="foto", width="60%", height="60%">
+            </figure>
+            <p><b>!DOCTYPE html:</b> Le dice al navegador "este documento sigue las reglas de HTM5 (la versión moderna), sin esto algunos navegadores pueden interpretar tu página en un modo raro de compatibilidad antigua"</p>
+            <p><b>html lang="es":</b> La etiqueta de raíz que envuelve todo el documento, el atributo lang="es" le dice al navegador (y al lector de pantalla), que el contenido esta en español, esto afecta cosas como correción ortografico automático y pronunciación en lectores de pantalla.</p>
+            <p><b>Head:</b> Contiene la información sobre la página, que el usuario no ve directamente en el cuerpo (metadatos, título de pestala, enlaces a CSS).</p>
+            <p><b>meta charset="UTF-8":</b> Le dice al navegador qué codificación de caracteres usar, sin esto, letras con tilde o simbolos como <sub>holi</sub> podrian verse como caracteres raros.</p>
+            <p><b>meta name="viewport", content="width=device-width, initial-scale=1.0":</b> Configura cómo se comporta la página en dispositivos móviles, sin esto tu página se vería zoomeada o mal escalada en un celular.</p>
+            <p><b>Title:</b> El texto que aparece en la pestaña del navegador y en resultados de google.</p>
+            <p><b>body:</b> Aquí va todo lo que el usuario ve e interactúa, texto imagenes, formularios y botones.</p>
+            <hr>
+            <h2>Etiquetas y atributos</h2>
+            <p>Sintaxis base, esta es la parte de "gramática" de HTML, su estructura basica es;</p>
+            <ul>
+                <li>-p- class="ejercicio", id="ejercicio1"-este es un parrafo-/p-</li>
+            </ul>
+            <table class="tabla1", border="2">Estructura de Etiqueta
+                <thead>
+                    <tr>
+                        <th>Pieza</th>
+                        <th>Nombre técnico</th>
+                        <th>Qué es?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-p-</td>
+                        <td>Etiqueta de apertura</td>
+                        <td>Marca el inicio del elemento</td>
+                    </tr>
+                    <tr>
+                        <td>-/p-</td>
+                        <td>Etiqueta de cierre</td>
+                        <td>Marca el final</td>
+                    </tr>
+                    <tr>
+                        <td>class="ejercicio"</td>
+                        <td>Atributo</td>
+                        <td>Información extra sobre el elemento</td>
+                    </tr>
+                    <tr>
+                        <td>id="ejercicio1"</td>
+                        <td> Atributo</td>
+                        <td>Otra información extra distinta que se utiliza en Jacascript</td>
+                    </tr>
+                    <tr>
+                        <td>todo junto</td>
+                        <td>Elemento</td>
+                        <td> La etiqueta de apertura + contenido + etiqueta de cierre</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Reglas importantes de la Sintaxis</h2>
+            <ol>
+                <li><b>Casi todas las etiquetas vienen en pares </b>(apertura y cierre), pero hay excepciones, etiquetas que no tienen contenido dentro, por lo tanto no necesitan cierre.<br>Estas se llaman etiquetas de un solo elemento (self-closing/void elements).</li>
+                <img src="imagenes/etiquetas.png" alt="foto">
+                <li><b>Los atributos van dentro de la etiqueta de apertura</b>, con la forma nombre="valor" (con comillas), un elemento puede tener varios atributos: type, id y min son los tres atributos distintos, todos dentro de la misma etiqueta input.</li>
+                <img src="imagenes/etiqueta-con-atributos.png", alt="foto">
+                <li><b>El anidamiento debe respetar el orden de cierre</b>, como cajas dentro de cajas, la ultima que abres debe ser la primera que cierras.</li>
+                <img src="imagenes/anidamiento-correcto.png", alt="foto">
+            </ol>
+            <hr>
+            <h2>Texto y Estructura de Contenido</h2>
+            <p>Veremos las etiquetas más comunes para ogranizar contenido de texto,y ver cuando se usa cada una con criterio no por costumbre.</p>
+            <h3>Encabezados</h3>
+            <p>Van de "h1 a h6", la regla de oro es representan una jerarquía real de importancia como el índice de un libro, no lo uses solo porque "quiero letra más grande", es saltarse niveles sin razón por ejemplo pasar de h1 a h4 sin h2 ni h3 en medio rompe la jerarquía lógica del documento</p>
+            <figure>
+                <img src="imagenes/textos.png", alt="foto">
+            </figure>
+            <h3>Párrafos y saltos de línea</h3>
+            <p>-p- crea un bloque nuevo y en cambio -br- solo "empuja" el texto a la siguiente línea, dentro del mismo bloque, no crea separación real, también -hr- crea una linea separadora horizontal.</p>
+            <figure><img src="imagenes/parrafo-y-salto-de-linea.png"></figure>
+            <h3>Listas</h3>
+            <p>Hay dos tipos de listas las ordenadas y desordenadas</p>
+            <figure><img src="imagenes/listas.png"></figure>
+            <h3>Texto en Línea con Significado</h3>
+            Darle apariencia a un texto
+            <figure><img src="imagenes/texto-en-linea-con-significado.png"></figure>
+            <hr>
+            <h2>Enlaces e Imágenes</h2>
+            <h3>Enlaces</h3>
+            <p>el href es el que dice a dónde va el enlace puede ser:</p>
+            <ul>
+                <li>href="ejemplo.html"(archivo de tu mismo sitio, ruta relativa)</li>
+                <li>href="https://www.youtube.com"(una página externa, ruta absoluta)</li>
+                <li>href="#seccion2"(ancla)</li>
+            </ul>
+            <figure><img src="imagenes/enlaces.png"></figure>
+            <h3>Imágenes</h3>
+            <p>contiene los atributos src (SOuRCe), de donde sale al imágen, alt (texto alternativo), se muestra si la imágen no carga, para describir la imagen para que alguien que no vea pueda leerla, pueden estar tanto en archivo de tu mismo sitio, como también de ruta absoluta.</p>
+            <figure class="revista">
+                <img src="https://i.pinimg.com/originals/28/d7/44/28d744d2da53a321645ae56b93e5185a.png" alt="Descripción grafica de la introdución a la química", width="60%", height="#">
+
+                <img src="imagenes/análisis-de-química.jpg", alt="un análisis descriptivo de química", width="60%", height="#">
+            </figure>
+            <hr>
+            <h2>Tipos de input</h2>
+            <figure>
+                <img src="imagenes/inputs.png" alt="#">
+                <img src="imagenes/input-completo.png", alt="#">
+            </figure>
+            
+            <h2>Lista Desplegable</h2>
+            <figure>
+                <img src="imagenes/lista.png", alt="#">
+            </figure>
+            <hr>
+            <h2>Atributo de validación nativa de HTML</h2>
+            <p>El atributo required le dice al navegador no dejar enviar el formulario si está vacacío, mientras que los min/max son límites númericos, esto es validación básica, del lado del navegador, no reemplaza la validación que ya haces con javascript, pero es una primera capa útil.</p>
+            <figure>
+                <img src="imagenes/atributo-con-validación.png", alt="#">
+            </figure>
+            
+        </div>
+        
+        
+
+    </main>
+
+    <footer>By: Kim Hotoke</footer>
+    
+</body>
+</html>

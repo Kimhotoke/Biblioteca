@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavasScript</title>
+    <link rel="stylesheet" href="css/js.css">
+</head>
+<body>
+
+    <nav class="nav-principal">
+        <ul class="nav-enlaces">
+            <li><a href="index.html">Apuntes HTML</a></li>
+            <li><a href="css.html">Apuntes CSS</a></li>
+            <li><a href="javascript.html" class="activo">Apuntes JavaScript</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <section class="javasScript">
+            <div class="javaScript">
+                <!--Repaso de JavaScript "verdadera programación", variables y tipos de datos, operadores, condicionales, bucles, funciones, ELDOM, eventos-->
+                <h2>JavaScript</h2>
+                <p>JavasScript es la electricidad y las tuberías con válvulas, lo que hace que las cosas reaccionen, cambien, calculen, respondad a lo que hace el usuario.<br>La diferencia fundamental con HTML es que es un lenguaje de marcado, describe, no decide.</p>
+                <p>En cambio JavaScript es un lenguaje de programación de verdad, tiene lógica, toma decisiones, repite acciones, guarda y transforma datos.</p>
+                <h3>¿Dónde vive JavaScript?</h3>
+                <p>A diferencia de HTML que solo existe en el navegador, javascript puede correr en: el navegador, o un servidor con Node.js</p>
+                <hr>
+                <h2>Variables y tipos de datos</h2>
+                <p>Los tipos de datos que JavaScript maneja son:</p>
+                <figure>
+                    <img src="imagenes/tipos-de-datos.png", alt="">
+                </figure>
+               <h2>Datos "Compuestos"</h2>
+               <p>Son estructuras que se agrupan varios valores juntos, y son justo los que más se usan</p>
+               <figure>
+                <img src="imagenes/datos-con-arreglo-objeto.png", alt="">
+               </figure>
+               <h2>Tipo Dinámico</h2>
+               <p>Además también, una misma variable puede cambiar de tipo durante la ejecución</p>
+               <figure>
+                <img src="imagenes/Tipado-dinamico.png", alt="">
+               </figure>
+               <p>Esto es cómodo, pero tambnién es la razón de un bug clásico, ya que los input de HTML siempre entregan un String sin importar el type que tengan configurado, javascript no lo convierte automaticamente por ti.</p>
+               <hr>
+               <h2>Regla del Operador</h2>
+               <p>El operador + en JavaScript tiene doble uso: si ambos lados son number hará una suma matemática y si al menos uno de los dos lados es String hace concatenación "pegar textos".<br>Sirve para sumar número y pegar textos, JavaScript decide cuál hacer según el tipo de dato, no según lo que tú querías matemáticamente, siempre que mezcles datos que podrían venir de un input conviertelos primero a numeros.</p>
+               <p> cuando es la regla de -, *, / fuerzan la conversión a número a diferencia de +, ya que estos operadores solo sirven para matemáticas.<br>Si el texto no se puede convertir a un número válido, en vez de dar error, te da un valor especial llamado NaN (Not a Number), cuando el texto esta vacio lo toma como cero.</p>
+               <hr>
+               <h2>Operadores</h2>
+               <p><ul>
+                <li>=== compara valor y tipo</li>
+                <li>== solo compara valor</li>
+                <li>!== diferente estricto</li>
+                <li> > mayor que</li>
+                <li> < menor que</li>
+                <li> >= mayor o igual</li>
+                <li> <= menor o igual</li>
+               </ul></p>
+               <hr>
+               <h2>Operadores lógicos</h2>
+               <p>
+                <ul>
+                    <li> && "y, and" ambas condiciones deben ser verdaderas</li>
+                    <li> || "o, or" al menos una condición debe ser verdadera</li>
+                    <li> ! "no, not" invierte el valor true se vuelve false y viceversa</li>
+                </ul>
+               </p>
+               <hr>
+               <h2>Condicionales</h2>
+               <figure>
+                <img src="imagenes/Operadores.png", alt="">
+               </figure>
+               <h3>Switch</h3>
+               <p>Cuando tienes muchas comparaciones contra el mismo valor un switch puede ser más legible que una cadena larga de else if, por ejemplo imagina que quieres mostrar un mensaje distinto según el tipo de reacción que el estudiante identificó:</p>
+               <figure>
+                <img src="imagenes/switch.png", alt="">
+               </figure>
+               <ul>
+                <li>Switch: variable que se compara una sola vez</li>
+                <li>case "Valor": Cada posible valor que quieres revisar</li>
+                <li>tipoReaccion: Coincide con ese valor exacto (comparación tipo ===, estricta), ejecuta ese bloque.</li>
+                <li>break: Muy importante le dice a JavaScript ya terminé con este caso sal de Switch, si se te olvida, JavaScript sigue ejecutando el case siguiente también, aunque no coincida esto se llama (Fall through) y es un error común.</li>
+                <li>Default: El equivalente al else final, se ejecuta sin ninguna case.</li>
+               </ul>
+               <hr>
+               <h2>Bucles</h2>
+               <p>Los bucles o ciclos son una herramienta más poderosa en JavaScript, imagina que tienes que imprimir los números del uno al cien, escribir cada uno sería una locura, un bucle hace ese trabajo pesado por ti automáticamente.<br>En JavaScript, los bucles se dividen en dos grandes categorías:<b>Bucles clásicoas (controlados por contador) y bucles modernos para recorrer listas.</b></p>
+               <h3>El Bucle "for" el clasico</h3>
+               <p>Es el más usado cuando sabes cuántas veces quieres que se repita algo, su estructura tiene tres partes separadas por punto y coma.</p>
+               <figure>
+                <img src="imagenes/bucle_for.png", alt="bucle for">
+               </figure>
+               <ul>
+                <li>Inicialización: Se ejecuta una sola vez al principio (let i= 0).</li>
+                <li>Condición: Se evalúa antes de cada vuelta, si es true el bucle sigue y si es false se detiene.</li>
+                <li>Actualización: Se ejecuta al final de cada vuelta (i++ 1).</li>
+               </ul>
+               <figure><img src="imagenes/ejemplo_for.png" alt="bucle for ejemplo practico"><img src="imagenes/bucle_for_practico.png", alt="ejemplo practico"> </figure>
+               <h3>Bucle while (mientras)</h3>
+               <p>Se usa cuando <b>No sabes cuántas veces</b> se va repetir, pero sabes que debe seguir mientras se cumpla una condición.</p>
+               <figure>
+                <img src="imagenes/bucle_while.png", alt="Bucle while">
+               </figure>
+               <p>Si el bucle nunca se vuelve falsa, tu programa se congelará (bucle infinito).</p>
+
+               <h3>Bucle do....while (haz mientras)</h3>
+               <p>Es casi igual a while, pero con una diferencia clave, siempre se ejecuta al menos una vez, porque la condición se evalúa despues de ejecutar el código.</p>
+               <figure>
+                <img src="imagenes/bucle_do_while.png", alt="bucle do while">
+               </figure>
+
+               <h3>Bucles para recorrer listas (Arreglos)</h3>
+               <h4>for....of (el recomendado para listas)</h4>
+               <p>Aquí es donde JavaScript moderno brilla, si tienes una lista de array, estos son los bucles que debes usar.</p>
+               <figure>
+                <img src="imagenes/bucle_con_array.png", alt="Bucle con array">
+               </figure>
+               <h4>for...in (para objetos)</h4>
+               <p>Este bucle recorre las claves (propiedades) de un objeto, no se usa para array.</p>
+               <figure>
+                <img src="imagenes/bucle_for_in.png", alt="bucle for...in">
+               </figure>
+               <h4>.forEach (método de arreglo)</h4>
+               <p>Es una función que se ejecuta por cada elemento de la lista, es muy usado en React y código moderno.</p>
+               <figure>
+                <img src="imagenes/bucle_forEach.png", alt="forEach">
+               </figure>
+
+               <h2>Control de bucles</h2>
+               <p>A veces se necesita interrumpir un bucle antes de que termine.</p>
+               <h3>break</h3>
+               <p>Detiene el bucle por completo.</p>
+               <figure>
+                <img src="imagenes/bucle_break.png", alt="Control de bucle break">
+               </figure>
+               <h3>continue</h3>
+               <p>Salta a la siguiente vuelta, ignorando el resto del código para esa iteración.</p>
+               <figure>
+                <img src="imagenes/bucle_continue.png", alt="bucle continue">
+               </figure>
+               
+               <h2>Bucles anidados</h2>
+               <p>Se pueden poner bucles dentro de otro bucle, se usan para matrices o tablas.</p>
+               <figure>
+                <img src="imagenes/bucle_anidado.png", alt="Bucle anidado">
+               </figure>
+
+               <h2>Funciones</h2>
+
+            
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="javascript/introduccion.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*outline: 1px solid red;*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 2fr);
+    /*grid-template-rows: 100px 1fr 80px;*/
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+    height: 100vh;
+    min-width: 0;
+}
+
+.header {
+    grid-area: header; 
+    background-color: #fff;
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    background-color: rgba(31, 60, 104, 0.877);
+}
+/*Encabezado*/
+.header h1 {
+    font-size: 1.9rem;
+    color: rgb(21, 82, 151);
+    background-color: #fff;
+    padding: 1px;
+}
+.identificacion, .fecha, .pdf {
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    color: #fff;
+}
+.pdf button {
+    padding: 12px 58px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 2px solid rgb(164, 222, 255);
+}
+.pdf button:hover {
+    transform: translateY(-5px);
+    background-color: #abdaec;
+}
+/*Logo*/
+.header .logo {
+    width: 40px;
+    height: auto;
+}
+
+/*Indicaciones*/
+.aside {
+    grid-area: aside;
+    background-color: #c5e9f088;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    padding: 10px;
+    margin: auto;
+    align-items: center;
+}
+.aside p {
+    margin: 40px;
+    font-size: 1.9rem;
+    background-color: #fff;
+    padding: 5px 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #00000059;
+}
+.aside p:hover {
+    transform: translateY(-10px);
+    background-color: #00000020;
+}
+/*logos*/
+.aside img {
+    width: 40px;
+    height: auto;
+    margin: 5px;
+}
+/*Contenido de Paciente*/
+.main {
+    grid-area: main;
+    background-color: #eceeee8e;
+    display: grid;
+    /*grid-template-columns: repeat(2, 1fr);*/
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "glucosa colesterol"
+    "resumen resumen"
+    "hemoglobina .";
+    gap: 10px;
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+    padding: 50px;
+}
+
+.glucosa {
+    grid-area: glucosa;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+.glucosa:hover {
+    transform: translateY(-10px);
+    background-color: #00000010;
+}
+.colesterol {
+    grid-area: colesterol;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex; 
+    gap: 10px;
+    transition: background-color 0.2s ease;
+}
+.colesterol:hover {
+    transform: translateY(-10px);
+    background-color: #00000010;
+}
+.resumen {
+    grid-area: resumen;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    transition: background-color 0.2s ease;
+}
+.resumen:hover {
+    transform: translateY(-10px);
+    background-color: #00000010;
+}
+.hemoglobina {
+    grid-area: hemoglobina;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hemoglobina:hover {
+    transform: translateY(-10px);
+    background-color: #00000010;
+}
+.glucosa, .colesterol, .resumen, .hemoglobina {
+    border: 3px solid #666666c4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    min-width: 0;
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+/*imagenes*/
+.img {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.glucosa img, .colesterol img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 150px;
+    object-fit: contain;
+}
+.panel-derecho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.panel-derecho button {
+    padding: 10px 100px;
+    border-style: none;
+    border-radius: 18px;
+    margin:5px;
+    background-color: #0d2841;
+    color: #fff;
+}
+
+/*texto*/
+.text {
+    padding: 20px;
+}
+.text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.text p {
+    font-size: 2.5rem;
+    color: green;
+}
+.text .valor {
+    font-size: 1.5rem;
+    letter-spacing: -2px;
+}
+/*texto Resumen*/
+.text-resumen {
+    padding: 15px;
+    margin: 5px;
+}
+.text-resumen h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.text-resumen p {
+    font-size: 1.5rem;
+}
+.footer {
+    grid-area: footer;
+    background-color: #abbcbdbd;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 8px;
+    padding: 5px;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer button {
+    border-style: none;
+    padding: 18px 5px;
+    margin: 15px;
+    background-color: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.footer button:hover {
+    background-color: #00000010;
+    transform: translateY(-10px);
+    color: #fff;
+}
+
+.img-hemoglobina {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.footer .img-hemoglobina {
+    display: flex;
+    align-items: flex-end;
+}
+
+/*Responsitive Cel*/
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Todo a una columna */
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "main"
+        "footer";
+        height: auto;
+    }
+    .header {
+        grid-template-columns: 1fr; /* El header también se apila */
+        text-align: center;
+        gap: 15px;
+    }
+    .aside {
+        grid-template-columns: repeat(3, 1fr); /* Menú horizontal */
+    }
+    .main {
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-areas: 
+        "glucosa"
+        "colesterol"
+        "resumen"
+        "hemoglobina";
+        padding: 15px;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}

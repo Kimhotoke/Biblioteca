@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.7;
+    padding: 0;
+    margin: 0;
+}
+
+
+.nav-principal {
+    background-color: #161b22;
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    box-shadow: 0 2px 12px rgba(247, 223, 30, 0.15);
+    border-bottom: 2px solid #f7df1e;
+}
+
+.nav-enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-enlaces a {
+    color: #f7df1e;
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.nav-enlaces a:hover {
+    background-color: #f7df1e;
+    color: #0d1117;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 223, 30, 0.4);
+}
+
+.nav-enlaces a.activo {
+    border-color: #f7df1e;
+    background-color: rgba(247, 223, 30, 0.1);
+}
+
+.header-js {
+    background: linear-gradient(135deg, #161b22 0%, #21262d 100%);
+    color: #f7df1e;
+    text-align: center;
+    padding: 60px 20px 50px 20px;
+    border-bottom: 4px solid #f7df1e;
+    position: relative;
+}
+
+.header-js::before {
+    content: '</>';
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 1.5rem;
+    color: rgba(247, 223, 30, 0.3);
+    font-family: 'Fira Code', monospace;
+}
+
+.header-js::after {
+    content: '{ }';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 1.5rem;
+    color: rgba(247, 223, 30, 0.3);
+    font-family: 'Fira Code', monospace;
+}
+
+.header-js h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    font-family: 'Fira Code', monospace;
+    text-shadow: 0 0 20px rgba(247, 223, 30, 0.5);
+}
+
+.subtitulo-js {
+    font-size: 1.1rem;
+    color: #8b949e;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+.javasScript {
+    background-color: #161b22;
+    padding: 45px 50px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    border-left: 6px solid #f7df1e;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.javaScript h2 {
+    font-size: 1.9rem;
+    color: #f7df1e;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #30363d;
+    font-family: 'Fira Code', monospace;
+    letter-spacing: 1px;
+}
+
+.javaScript h2:first-child {
+    margin-top: 0;
+}
+
+.javaScript h3 {
+    font-size: 1.4rem;
+    color: #58a6ff;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    padding-left: 12px;
+    border-left: 4px solid #f7df1e;
+    font-family: 'Fira Code', monospace;
+}
+
+.javaScript h4 {
+    font-size: 1.15rem;
+    color: #79c0ff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #21262d;
+    padding: 8px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    font-family: 'Fira Code', monospace;
+}
+
+.javaScript p {
+    text-align: justify;
+    color: #c9d1d9;
+    margin-bottom: 15px;
+    font-size: 0.98rem;
+}
+
+.javaScript b,
+.javaScript strong {
+    color: #f7df1e;
+    font-weight: bold;
+}
+
+.javaScript ul,
+.javaScript ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    color: #c9d1d9;
+}
+
+.javaScript li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.javaScript li::marker {
+    color: #f7df1e;
+}
+
+.javaScript hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #f7df1e, transparent);
+    margin: 40px 0;
+    opacity: 0.4;
+}
+
+.javaScript a {
+    color: #58a6ff;
+    text-decoration: none;
+    border-bottom: 1px dashed #58a6ff;
+    transition: all 0.2s ease;
+}
+
+.javaScript a:hover {
+    color: #f7df1e;
+    border-bottom-color: #f7df1e;
+}
+
+.javaScript figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #0d1117;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+    gap: 15px;
+}
+
+.javaScript figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #30363d;
+    box-shadow: 0 4px 20px rgba(247, 223, 30, 0.1);
+    transition: all 0.3s ease;
+}
+
+.javaScript figure img:hover {
+    border-color: #f7df1e;
+    box-shadow: 0 4px 25px rgba(247, 223, 30, 0.3);
+    transform: scale(1.02);
+}
+
+
+footer {
+    background-color: #161b22;
+    color: #8b949e;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    border-top: 3px solid #f7df1e;
+    font-family: 'Fira Code', monospace;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+footer p::before {
+    content: '// ';
+    color: #f7df1e;
+}
+
+
+@media (max-width: 768px) {
+    .nav-enlaces {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .nav-enlaces a {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .header-js {
+        padding: 40px 15px 35px 15px;
+    }
+
+    .header-js::before,
+    .header-js::after {
+        font-size: 1rem;
+        top: 10px;
+    }
+
+    .header-js::before {
+        left: 15px;
+    }
+
+    .header-js::after {
+        right: 15px;
+    }
+
+    .header-js h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitulo-js {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+
+    .javasScript {
+        padding: 25px 20px;
+    }
+
+    .javaScript h2 {
+        font-size: 1.4rem;
+    }
+
+    .javaScript h3 {
+        font-size: 1.15rem;
+    }
+
+    .javaScript h4 {
+        font-size: 1rem;
+    }
+
+    .javaScript p {
+        font-size: 0.92rem;
+    }
+
+    .javaScript ul,
+    .javaScript ol {
+        margin-left: 20px;
+    }
+}

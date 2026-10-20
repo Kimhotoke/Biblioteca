@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <header><h1>CSS</h1></header>
+    <nav class="menu-navegacion">
+        <div class="menu">
+            <h2>Contenido</h2>
+            <ul class="enlaces">
+                <li><a href="index.html">HTML</a></li>
+                <li><a href="#introduccion">Introducción CSS</a></li>
+                <li><a href="#box-model">Box Model</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#css-grid">CSS Grid</a></li>
+                <li><a href="#media">Media Queries</a></li>
+                <li><a href="#variables-y-animacion">Variables y Animaciones</a></li>
+                <li><a href="#media"></a></li>
+                <li><a href="#media"></a></li>
+                <li><a href="html/resultados-laboratorio.html">Practicas</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h2 id="introduccion">Introducción</h2>
+        <p>Hojas de estilo en cascada, es lenguaje que define la presentación visual de los documentos estructurados de HTML, la anatomía de una regla de CSS, cosnta de tres partes:</p>
+        <ol>
+            <li>Selector: indica que elementos (h1, p, button), se le aplicara el estilo por ejemplo .tarjeta (class="tarjet"), #tarjeta (id="tarjeta").</li>
+            <li>Propiedad: El atributo visual que deseas modificar (color, color de fondo, font-size).</li>
+            <li>Valor: La configuración específica que le asignas.</li>
+        </ol>
+        <h2 id="box-model">Box Model</h2>
+        <p>Todo elementos renderizado en el navegador es una caja rectangular compuesta por 4 capas (de adentro hacia afuera):</p>
+        <ol>
+            <li>Content: El área donde, habita el texto, imagen o elementos hijos.</li>
+            <li>Padding: Espacio transparente interno entre el contenido y el borde.</li>
+            <li>Border: La linea que rodea el relleno y el contenido.</li>
+            <li>Margin: Espacio transparente externo que separa esta caja de las vecinas</li>
+            <li>Box-sizing y Border-box: Propiedad de oro de la industria, asegura que el ancho widht y el alto height, que les des a un elemento incluyan el padding, y el border, evitando que la caja "se rompa" o se vuelva más grande de lo calculado.</li>
+        </ol>
+
+        <h2 id="flexbox">CSS FLEXBOX</h2>
+        <p>Flexbox es un modelo de diseño unidimensional diseñado para distribuir espacio y alinear elementos a lo largo de un eje. Para activar FLexbox, se aplica la propiedad "display: flex;" al elemento padre llamado Flex Container, a partir de ese momentos, todos sus hijos directos se convierten en Flex Items.</p>
+
+        <h3>Ejes de Flexbox</h3>
+        <ul>
+            <li><b>Eje principal(Main Axis):</b> Dirección por defecto en la que se colocan los elementos de izquierda a derecha.</li>
+            <li><b>Eje transversal (Cross Axis):</b> Dirección perpendicular al eje principal de arriba a abajo.</li>
+        </ul>
+        <h3>Propiedades Clave del Contenedor Padre</h3>
+        <ul>
+            <li><b>flex-direction:</b> Defiene la dirección del eje principal (row) por defecto, column, row-reverse, column-reverse.</li>
+            <li><b>justify-content:</b> Alinea los elementos a lo largo del eje principal, flex-start, center, flex-end.<br> 
+            space-between (separa los extremos y distribuye el espacio al centro).<br>
+            space-around y space-evenly (distribuye el espacio equitativamente).</li>
+            <li><b>align-items:</b> Alinea los elementos a lo largo del eje transversal, center, flex-start, flex-end, stretch.</li>
+            <li><b>gap:</b> Define la distancia de separación exacta entre los elementos hijos, evitando usar margenes individuales.</li>
+            <li><b>flex-wrap:</b> Controla si los elementos pasan a la siguiente línea cuando no caben en la pantalla (nowrap, wrap).</li>
+        </ul>
+
+        <div class="todas-las-tarjetas">
+        <article class="contenedor-de-tarjeta">
+            <div class="tarjetas">
+            <h2>Tarjeta</h2>
+            <p>lore ipsum dolor sit amet</p>
+
+            </div>
+        </article>
+
+        <article class="tarjeta-alerta">
+            <div class="alerta">
+                <h2>Kim-Hotoke</h2>
+                <p>
+                    <b>ID Muestra: </b>#LAB-7932<br>
+                    <b>Analísis: </b>Glucosa pre<br>
+                    <b>Resultado: </b> 110.2 mg/dL
+                </p>
+                <span><b>Atención inmediata</b><br>Glucosa en sangre elevado indicios de pre-diabetes</span>
+            </div>
+
+        </article>
+
+        <article class="tarjeta-de-resultados">
+            <div class="resultado">
+
+                <h2>Examen de Laboratorio</h2>
+                <h3>Resultados</h3>
+                <h4>Perfil Diabetico</h4>
+                <span>
+                    <p><b>Fecha:</b> 02/03/2026</p>
+            
+                    <p>
+                
+                    <b>Glucosa-Pre</b>: 95.34 mg/dL<br> 
+                    <b>Glucosa-Post</b>: 99.87 mg/dL<br>
+                    <b>Hemoglobina</b>: 5.4 %<br>
+
+                    </p>
+                </span>
+                <button type="button" id="resultados">Descargar Resultados</button>
+            
+
+            </div>
+        </article>
+    
+        <div class="flex-box">
+            <h2>Resumen del Turno</h2>
+            <article class="muestras-del-dia">
+    
+                <div class="tarjeta-stat">
+                    <span class="etiqueta">Procesadas</span>
+                    <div class="numero">15</div>
+                </div>
+                <div class="tarjeta-stat">
+                    <span class="etiqueta">Normales</span>
+                    <div class="numero">10</div>
+                </div>
+                <div class="tarjeta-stat">
+                    <span class="etiqueta">Crítico</span>
+                    <div class="numero">5</div>
+                </div>
+
+            </article>
+        </div>
+
+        <article class="menu-de-laboratorio">
+
+            <h1>Biolab</h1>
+
+            <ul class="nav-links">
+                <li><a href="#">pacientes</a>
+                <li><a href="#">Resultados</a></li>
+                <li> <a href="#">Inventario</a></li>
+            </ul>
+
+
+            <button class="boton-nuevo">Nueva muestra</button>
+
+        </article>
+        <section class="seccion">
+            <h2 id="css-grid">CSS Grid</h2>
+        </section>
+
+        <p>Imagina que tienes una hoja de cuaderno cuadriculada, con flexbox, colocas los objetos de otro como una fila de piezas de dominó, con CSS grid, dibujas una cuadrícula fija con filas y columnas, tu decides cuántas columnas tiene la mesa y en que casilla exacta o cuantas casillas juntas, se va a acomodar cada objeto, es como armar un rompecabezas o una pagina de revistas.</p><br>
+        <p><b>Para activar CSS grid aplicamos la propiedad "display: grid;"</b></p>
+
+        <ol>
+            <li><b>Definición de columnas  y Filas:</b> grid-template-columns define el número y ancho de las columnas.
+                <ul>
+                <li>grid-template-columns: 200 px 1fr 1fr (crea 3 columnas, una fija de 200 px y dos que se reparten el espacio restante).</li>
+                <li>grid-template-columns: repeat (3, 1fr). (crea 3 columnas de idéntico tamaño)</li>
+                <li>grid-template-rows: define la altura de las filas.</li>
+                </ul>
+
+            </li><br>
+            <li><b>La unidad fr (Fractional Unit):</b> Es una unidad exclusiva de CSS grid que representa una fracción del espacio libre disponible en el contenedor. 1fr 2fr significa que la segunda columna será el doble de grande que la primera.</li><br>
+
+            <li><b>Separación(gap):</b> Ya sea (gap: 20px;) o row-gap y column-gap establece la distancia exacta entre las casillas de la cuadrícula.</li><br>
+
+            <li><b>Abarcar multiples celdas (Spanning):</b> En los elementos hijos podemos usar grid-column: span 2; o grid-row: span 2; para que una tarjeta ocupe el ancho/alto de dos o más casillas.</li><br>
+
+            <li><b>Rejilla Responsiva Autómatica (auto-fit, auto-fill + minmax):</b> grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); Esta es una regla más potente de CSS moderno, crea columnas automáticas que miden al menos 250px, y se adaptan solas al tamaño de la pantalla sin necesida de escribir código extra.</li>
+        </ol>
+
+        <h2>Ejemplos Practicos</h2>
+        <div class="imagenes-grid">
+            <img src="imagenes/contenedor-padre-grid.png" alt="Imagen 1">
+            <img src="imagenes/columnayfila-grid.png" alt="Imagen 1">
+            <img src="imagenes/unidadfr-grid.png" alt="Imagen 1">
+            <img src="imagenes/repeat-grid.png" alt="Imagen 1">
+            <img src="imagenes/gap-grid.png" alt="Imagen 1">
+            <img src="imagenes/areas-grid.png" alt="Imagen 1">
+            <img src="imagenes/asignacion-areas-grid.png" alt="Imagen 1">
+        </div>
+
+        <div class="galeria-grid">
+            <div class="caja">Muestra #1</div>
+            <div class="caja">Muestra #2</div>
+            <div class="caja">Muestra #3</div>
+            <div class="caja">Muestra #4</div>
+            <div class="caja">Muestra #5</div>
+            <div class="caja">Muestra #6</div>
+            <div class="caja">Muestra #7</div>
+            <div class="caja">Muestra #8</div>
+            <div class="caja">Muestra #9</div>
+        </div>
+
+        <div class="catalogo-laboratorio">
+
+            <div class="tarjeta-destacada">
+                <h3>General Ejecutivo</h3>
+                <p>Incluye Perfil Bioquímico de 30 elementos, Biometría hemática completo y examen general de orina con entrega prioritaria.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Perfil Renal</h3>
+                <p>Evalución de Creatinina, Nitrógeno ureico, ácido úrico, electrolitros, proteínas en orina.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Perfil Lípidico</h3>
+                <p>Evaluación de Colesterol Total, HDL, LDL y trigliceridos.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Perfil Glucemico</h3>
+                <p>Evaluación de glucosa pre y post, hemoglobina glicosilada.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Perfil Hormonal</h3>
+                <p>Evaluación de hormonas tiroideas, T3, T4, TSH.</p>
+            </div>
+        </div>
+    
+        <!-- <div class="areas-grid">
+        <div class="header">Laboratorio</div>
+        <div class="sidebar">Examenes</div>
+        <div class="main">Resultados</div>
+        <div class="footer">By: Kim-Hotoke</div>
+        </div> -->
+
+        <p>Así como en Flexbox, grid tiene propiedades para alinear los elementos, pero aquí hay un detalle mportante: grid maneja dos tipos de alineación:</p><br>
+        
+        <ul>
+            <li><b>Alinear los elementos dentro de sus celdas:</b> Se logra con justify-items, align-items.</li>
+            <li><b>Alinear toda la cuadricula dentro del contenedor:</b> Se logra con justify-content, align-content.</li>
+        </ul>
+
+        <h2>Propiedades para alinear los items dentro de sus celdas</h2>
+
+        <table border="1" class="propiedades-grid">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Que hace?</th>
+                    <th> Valores comunes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>justify-items</td>
+                    <td>Aline los items horizontalmente dentro de su celda</td>
+                    <td>start, center, end y stretch</td>
+                </tr>
+                <tr>
+                    <td>align-items</td>
+                    <td>Alinea los items verticalmente dentro de su celda</td>
+                    <td>start, center, end y strecth</td>
+                </tr>
+                <tr>
+                    <td>place-items</td>
+                    <td>Atajo para ambos</td>
+                    <td>center center</td>
+                </tr>
+
+            </tbody>
+        </table>
+        
+        <table border="1" class="propiedades-grid">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Que hace?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Justify-content</td>
+                    <td>Alinea la cuadrícula horizontalmente en el contenedor</td>
+                </tr>
+                <tr>
+                    <td>align-content</td>
+                    <td>Alinea la cuadrícula verticalmente en el contenedor</td>
+                </tr>
+                <tr>
+                    <td>place-content</td>
+                    <td>Atajo para ambos</td>
+                </tr>
+            </tbody>
+        </table><br>
+
+        <h2>Ejemplos Practicos</h2>
+        
+        <article class="ejemplo-items">
+            <div class="imagen-items">
+                <img src="imagenes/alineacion-grid.png">
+            </div>
+        </article>
+
+        <h2>Grid-auto-flow</h2>
+        <p>Cuando no defines explícitamente donde va cada elemento, Grid los coloca automatícamente en filas, pero puede cambiar ese comportamiento.</p>
+
+        <article class="ejemplo-items">
+            <div class="imagen-items">
+                <img src="imagenes/grid-auto-flow.png">
+            </div>
+        </article>
+
+        <p>Dense es muy util cuano tienes elementos de diferentes tamaños y quieres evitar espacios vacíos</p>
+
+        <h2>Grid-auto-rows y grid-auto-columns</h2>
+        <p>Cuando creas más filas o columnas de las que definiste, grid las crea automáticamente, estas propiedades controlas su tamaño.</p>
+
+        <article class="ejemplo-items">
+            <div class="imagen-items">
+                <img src="imagenes/grid-auto-rows-columns.png" alt="">
+            </div>
+        </article>
+
+        <section class="seccion">
+            <h2>Grid-template-areas</h2>
+            <p>Es tan poderoso que merece su propio sección</p>
+        </section>
+
+        <article class="ejemplo-items">
+            <div class="imagen-items">
+                <img src="imagenes/grid-areas.png" alt="">
+            </div>
+        </article>   
+        
+        <section class="seccion-reglas">
+            <h3>Reglas</h3>
+
+            <ul>
+                <li>Cada string es una fila</li>
+                <li>Repetir un nombre hace que el elementos abarque varias celdas</li>
+                <li>Un punto (.) deja un celda vacia</li>
+                <li>El área debe ser un rectángulo perfecto (no puede tener forma de L)</li>
+            </ul>
+
+        </section>
+
+        <section class="seccion">
+            <h2>Min-content, max-content y fit-content</h2>
+            <p>Unidades especiales que se adaptan al contenido</p>
+        </section>
+
+        <article class="ejemplo-items">
+            <div class="imagen-items">
+                <img src="imagenes/minmax-grid.png" alt="">
+            </div>
+        </article>
+
+        <section class="seccion">
+            <h3>Reglas</h3>
+            <ul>
+                <li><b>Min-content:</b> El ancho mínimo que necesita el contenido sin romper palabras</li>
+                <li><b>Max-content:</b> El ancho máximo que necesita el contenido sin cortar nada</li>
+                <li><b>Fit-content(200px):</b> Se ajusta al contenido pero sin pasar de 200px</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>Grid-column y grid-row</h2>
+            <p>También se puede usar número de línea, las líneas son las divisiones entre celdas, si tienes 3 columnas hay 4 lineas (una antes de la primera, 3 entre ellas y una despues de la última).</p>
+        </section>
+
+        <article class="ejemplo-items">
+            <div class="imagenes items"><img src="imagenes/column-row-grid.png" alt=""></div>
+        </article>
+
+        <section class="seccion">
+            <h2 id="media">Diseño Responsivo y Media Queries</h2>
+        </section>
+
+        <p>Imagina que compras un traje mágico de superhéroe, si estas en un pasillo muy estrecho (un telefono celular), el traje se encoge, guarda las herramientas en una sola fila hacia abajo y oculta los adornos gigantes para que no choques con las paredes.<br>Si entras a un gimnasio enorme (un monitor de computadora), el traje se despliega, muestra todas sus bolsas, en 3 o 4 columnas una al lado de la otra y agranda la letra para que todo se vea genial desde lejos.</p>
+        <h3>Medias Queries (@media)</h3>
+        <p>Son los sensores de ese traje mágico, le dicen a la pagina web "Mide la pantalla", si es más angosta que ceirto tamaño, cambia los colores la letra y el diseño para que se vea perfecta.</p>
+
+        <h3>Profundización Técnica</h3>
+
+        <ul>
+            <li><b>El Meta Tag Viewport (indispensable):</b> Sin esta línea en el "head" de tu HTMl, los telefonos móviles simularán una pantalla de escritorio gigante y encogerán toda la página como si fuera una miniatura ilegible.</li>
+            <img src="imagenes/viewport-media.png" alt="Viewport">
+            <li><b>Sintaxis de las Medias Queries (@media):</b> Son bloques condicionales que se activan únicamente cuando la pantalla cumple cierto rango de ancho</li>
+            <img src="imagenes/regla-media-queries.png" alt="reglas de media">
+        </ul>
+
+        <section class="seccion">
+            <h3>Estrategia Mobile-First vs Desktop-First</h3>
+            <ul>
+                <li><b>Desktop-First:</b> Escribes el CSS pensado para computadoras y agregas @media (max-width: 768px), para reducir o acomodar en pantallas pequeñas.</li>
+                <li><b>Mobile-First (Estandár de la Industria):</b> Escribes el CSS base pensando en pantallas pequeñas y usas @media (min-width: 768px), para expandir y añadir columnas a medida que la pantalla se hace más grande</li>
+            </ul>
+
+            <h3>Puntos de Interrupción (Breakpoints)</h3>
+            <ul>
+                <li><b>640px:</b> Teléfonos en modo horizontal o móviles grandes.</li>
+                <li><b>768px:</b> Tablets.</li>
+                <li><b>1024px:</b> Laptops, computadoras de escritorio.</li>
+                <li><b>1280px:</b> Pantallas anchas de alta resolución.</li>
+            </ul>
+        </section>
+        <section class="seccion">
+            <h2>Ejmplos</h2>
+        </section>
+        <img src="imagenes/ejemplo-media.png" alt="ejemplo media">
+
+        <section class="seccion">
+            <h2 id="variables-y-animacion">Variables CSS Animaciones y Transiciones</h2>
+            <h3>Variables CSS</h3>
+            <p>Imagina que estás pintando una maqueta gigante, en lugar de buscar bote por bode cada vez, que quieras pintar un muro de azul, creas un botón mágico en tu paleta llamado "AzulMarca", si algun día decides que el color ya no sea azul sino verde, solo cambias el color del botón mágico y toda tu maqueta cambia de color automáticamente al mismo tiempo</p>
+            <ul>
+                <li><b>Declaración:</b> Se definen con dos guiones (--), al inicio habitualmente se colocan dentro de ":root" para que estén disponibles en todo el documento.</li>
+                <li><b>Uso:</b> Se invocan mediante la función var(--nombre-variable).</li>
+            </ul>
+            <img class="img-seccion" src="imagenes/variables.png" alt="variables">
+            <h3>Transiciones y Animaciones</h3>
+            <p>Es la diferencia entre la teletransportación y caminar, sin transiciones, un botón cambia de color de golpe, con transiciones el botón se ilumina suavemente.<br>Las animaciones son como crear tus propios dibujos animados (Flipbooks), para que las luces parpadeen o los íconos giren mientras se procesa un estudio.</p>
+            <ul>
+                <li><b>Sintaxis Resumida:</b> transition: [propiedad] [duración] [función-de-tiempo];</li>
+                <img src="imagenes/animacion.png" alt="animación">
+            </ul>
+        </section>
+    </main>
+    
+    <footer></footer>
+</body>
+
+</html>

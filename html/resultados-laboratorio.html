@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Laboratorio</title>
+    <link rel="stylesheet" href="css/resultadoslab.css">
+
+</head>
+
+<body>
+    <div class="grid">
+        <header class="header">
+            <h1><img src="img/analisis-de-sangre.png" alt="logo" class="logo">
+                <li>
+                    <a href="../index.html"><em>Clinical Technical Laboratory</em></a>
+                </li>
+            </h1>
+            <div class="identificacion">
+                <h2>Paciente</h2>
+                <p>Raul Hernandez<br><b>Edad:</b>26 años</p>
+            </div>
+            <div class="fecha">
+                <p>18 de agosto 2026</p>
+            </div>
+            <div class="pdf">
+                <button type="button" id="descargaPdf">Descargar PDF</button>
+            </div>
+
+        </header>
+        <aside class="aside">
+            <p><img src="img/casa.png" alt="inicio"><br>Inicio</p>
+            <p><img src="img/auditoria.png" alt="resultados">Resultados</p>
+            <p><img src="img/expediente.png" alt="historial"><br>Historial Clínico</p>
+            <p><img src="img/cita-medica.png" alt="citas"><br>Proximas citas</p>
+            <p><img src="img/configuracion-del-usuario.png" alt="configuración">Configuración</p>
+            <p><img src="img/apoyo.png" alt="soporte"><br>Soporte</p>
+        </aside>
+
+        <main class="main">
+
+            <article class="glucosa">
+                <div class="text">
+                    <h2>Glucosa</h2>
+                    <p>95 mg/dL</p>
+                    <span class="valor">70 - 110 mg/dL</span>
+                </div>
+                <div class="img"><img src="img/grafico.jpg" alt="diagrama"></div>
+            </article>
+
+            <article class="colesterol">
+                <div class="text">
+                    <h2>Colesterol</h2>
+                    <p>210 mg/dL</p>
+                    <span class="valor">>200 mg/dL</span>
+                </div>
+                <div class="img"><img src="img/diseño-de-resultadocol.jpg" alt="diagrama"></div>
+            </article>
+            <article class="resumen">
+                <div class="text-resumen">
+                    <h2>Resumen General</h2>
+                    <p>Sus niveles de glucosa y hemoglobina se encuentran dentro de los parámetros normales, sin embargo, se observa una ligera elevación en el colesterol total, se recomienda mantener una dieta baja en grasas y consultar con su médico.</p>
+                </div>
+                <div class="panel-derecho">
+                    <div class="img"><img src="img/grafico-resumen.jpg" alt="grafico"></div>
+                    <button type="button" id="detalles">Ver más</button>
+                </div>
+            </article>
+            <article class="hemoglobina">
+                <div class="text">
+                <h2>Hemoglobina</h2>
+                <p>14.5 g/dL</p>
+                <span class="valor">13.8 - 17.2 g/dL</span>
+                </div>
+                <div class="img-hemoglobina"><img src="img/grafica-hemoglobina.jpg"> </div>
+            </article>
+
+        </main>
+
+        <footer class="footer">
+            <p>©︎ Laboratorio Clínico Técnico, By Kim Hotoke. Técnico en Laboratorio</p>
+            <button type="button" id="servicios">Términos y Condiciones |</button>
+            <button type="button" id="politica">Politica de privacidad  |</button>
+            <p>Soporte</p>
+        </footer>
+    </div>
+</body>
+</html>

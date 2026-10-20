@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #f7f5f0;
+    color: #2b2b2b;
+    line-height: 1.7;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #1a2b4a;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+header {
+    background: linear-gradient(135deg, #1a2b4a 0%, #2e4a7d 100%);
+    color: #f7f5f0;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px 20px;
+    letter-spacing: 1px;
+    font-family: 'Georgia', serif;
+    border-bottom: 5px solid #c9a961;
+}
+
+main {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+.intHTML {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #c9a961;
+}
+
+h1 {
+    text-align: center;
+    color: #1a2b4a;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #c9a961;
+    font-family: 'Georgia', serif;
+}
+
+h2 {
+    text-align: left;
+    color: #1a2b4a;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 5px solid #c9a961;
+    font-family: 'Georgia', serif;
+}
+
+h3 {
+    text-align: left;
+    color: #2e4a7d;
+    font-size: 1.35rem;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-family: 'Georgia', serif;
+}
+
+h4 {
+    text-align: left;
+    color: #2e4a7d;
+    font-size: 1.15rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: justify;
+    color: #3a3a3a;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+strong {
+    color: #1a2b4a;
+}
+
+b {
+    color: #1a2b4a;
+}
+
+ul, ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    color: #3a3a3a;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #c9a961, transparent);
+    margin: 40px 0;
+}
+
+a {
+    color: #2e4a7d;
+    text-decoration: none;
+    border-bottom: 1px dotted #2e4a7d;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #c9a961;
+    border-bottom-color: #c9a961;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    padding: 15px;
+    background-color: #f7f5f0;
+    border-radius: 6px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.esqueletosemantico {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.revista {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.revista img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.estructurahtml {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.tabla1 {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tabla1 thead {
+    background-color: #1a2b4a;
+    color: #f7f5f0;
+}
+
+.tabla1 th {
+    padding: 14px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.tabla1 td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0ddd5;
+    font-size: 0.95rem;
+}
+
+.tabla1 tbody tr:nth-child(even) {
+    background-color: #f7f5f0;
+}
+
+.tabla1 tbody tr:hover {
+    background-color: #f0ebdd;
+}
+
+.javasScript {
+    margin-top: 60px;
+}
+
+.javaScript {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #2e4a7d;
+}
+
+.javaScript h2 {
+    border-left: 5px solid #2e4a7d;
+}
+
+.javaScript h3 {
+    color: #1a2b4a;
+}
+
+.javaScript h4 {
+    color: #2e4a7d;
+    background-color: #f7f5f0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.javaScript figure img {
+    max-width: 100%;
+}
+
+footer {
+    background-color: #1a2b4a;
+    color: #f7f5f0;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+    border-top: 5px solid #c9a961;
+}
+
+/*NAVEGACIÓN ENTRE PROYECTOS*/
+nav {
+    background-color: #1a2b4a;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid #c9a961;
+}
+
+.nav-enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-enlaces a {
+    color: #f7f5f0;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border-bottom: none;
+    transition: all 0.3s ease;
+}
+
+.nav-enlaces a:hover {
+    color: #1a2b4a;
+    background-color: #c9a961;
+    transform: translateY(-2px);
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.8rem;
+        padding: 35px 15px;
+    }
+
+    main {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+
+    .intHTML,
+    .javaScript {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.98rem;
+    }
+
+    .revista {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .revista img {
+        max-width: 100%;
+    }
+
+    .tabla1 th,
+    .tabla1 td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
